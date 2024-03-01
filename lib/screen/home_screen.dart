@@ -31,13 +31,29 @@ class _HomeScreenState extends State<HomeScreen> {
               icon: const Icon(Icons.person),
               tooltip: 'Profile',
               onPressed: (){
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const ProfileScreen()),
-                );
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileScreen()));
               },
             ),
           ],
+        ),
+        body: Container(
+          decoration: BoxDecoration(
+            color: Colors.green.withOpacity(0.1),
+          ),
+          child: ListView.builder(
+            itemCount: 3,
+            itemBuilder: (context, position){
+              return Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Text(
+                    '',
+
+                  ),
+                ),
+              );
+            }
+          ),
         ),
       ),
     );

@@ -77,7 +77,7 @@ class _CalculatorState extends State<Calculator> {
         appBar: AppBar(
           title: const Text('Calculator'),
           centerTitle: true,
-          backgroundColor: Colors.green.withOpacity(0.5),
+          backgroundColor: Colors.green.withOpacity(0.75),
 
           leading: BackButton(
             onPressed: (){
@@ -211,7 +211,7 @@ class _CalculatorState extends State<Calculator> {
             onPressed: (){
               action;
               switch(action){
-                case('addtion'): _addition();
+                case('addition'): _addition();
                 default:;
 
               }
