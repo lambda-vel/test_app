@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:test_app/calculator.dart';
-import 'package:test_app/screen/home_screen.dart';
+// import 'package:test_app/screen/home_screen.dart';
 // import 'package:test_app/screen/splash_screen.dart';
 
 void main() {

@@ -20,34 +20,104 @@ class _CalculatorState extends State<Calculator> {
   }
 
   _clear(){
-    equation = null;
+    setState(() {
+      equation = null;
+    });
+    return Text(
+      '$equation',
+      // textAlign: TextAlign.end,
+      style: TextStyle(
+        fontSize: MediaQuery.sizeOf(context).height*0.046,
+      ),
+    );
   }
+
   _addition(){
-    equation = '$equation+';
+    setState(() {
+      equation = '$equation+';
+    });
+    return Text(
+      '$equation',
+      // textAlign: TextAlign.end,
+      style: TextStyle(
+        fontSize: MediaQuery.sizeOf(context).height*0.046,
+      ),
+    );
   }
 
   _subtraction(){
-    equation = '$equation-';
+    setState(() {
+      equation = '$equation-';
+    });
+    return Text(
+      '$equation',
+      // textAlign: TextAlign.end,
+      style: TextStyle(
+        fontSize: MediaQuery.sizeOf(context).height*0.046,
+      ),
+    );
   }
 
   _multiplication(){
-    equation = '$equation*';
+    setState(() {
+      equation = '$equation*';
+    });
+    return Text(
+      '$equation',
+      // textAlign: TextAlign.end,
+      style: TextStyle(
+        fontSize: MediaQuery.sizeOf(context).height*0.046,
+      ),
+    );
   }
 
   _division(){
-    equation = '$equation/';
+    setState(() {
+      equation = '$equation/';
+    });
+    return Text(
+      '$equation',
+      // textAlign: TextAlign.end,
+      style: TextStyle(
+        fontSize: MediaQuery.sizeOf(context).height*0.046,
+      ),
+    );
   }
 
   _percentage(){
-    equation = '$equation/';
+    setState(() {
+      equation = '$equation%';
+    });
+    return Text(
+      '$equation',
+      // textAlign: TextAlign.end,
+      style: TextStyle(
+        fontSize: MediaQuery.sizeOf(context).height*0.046,
+      ),
+    );
   }
 
   _equal(){
-    equation = '$equation/';
+    setState(() {
+      equation = '$equation=';
+    });
+    return Text(
+      '$equation',
+      // textAlign: TextAlign.end,
+      style: TextStyle(
+        fontSize: MediaQuery.sizeOf(context).height*0.046,
+      ),
+    );
   }
 
+
   _equation(){
-    equation ??= '0';
+    setState((){
+      equation ??= '0';
+      if (equation != null){
+        // something
+      }
+    });
     return Text(
       '$equation',
       // textAlign: TextAlign.end,
@@ -211,7 +281,7 @@ class _CalculatorState extends State<Calculator> {
             onPressed: (){
               action;
               switch(action){
-                case('addition'): _addition();
+                case('_addition()'): _addition;
                 default:;
 
               }
