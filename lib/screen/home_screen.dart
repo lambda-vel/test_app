@@ -77,9 +77,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   // }
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
-                      padding: const EdgeInsets.all(15.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: ElevatedButton(
-                        child: Text(menuItem[index]['Option']),
+                        child: Container(
+                          height: 45,
+                          alignment: Alignment.center,
+                          child: Text(
+                            menuItem[index]['Option'],
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              fontStyle: FontStyle.normal,
+
+                            ),
+                          ),
+                        ),
                         onPressed: () => navigateToScreen(menuItem[index]['Link']),
                       ),
                     );
