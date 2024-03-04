@@ -2,6 +2,8 @@
 // import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
+import 'home_screen.dart';
+
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
@@ -10,6 +12,11 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreen extends State<ProfileScreen> {
+
+  void _goToHome(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+  }
+
   @override
   Widget build(BuildContext context){
     return SafeArea(
@@ -20,11 +27,9 @@ class _ProfileScreen extends State<ProfileScreen> {
           backgroundColor: Colors.green.withOpacity(0.75),
           elevation: 50.0,
 
-          leading: IconButton(
-            icon: const Icon(Icons.menu),
-            tooltip: 'Menu',
-            onPressed: () {
-              // print('Hello');
+          leading: BackButton(
+            onPressed: (){
+              _goToHome();
             },
           ),
 

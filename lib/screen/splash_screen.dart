@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/screen/profile_screen.dart';
+import 'package:test_app/screen/home_screen.dart';
+// import 'package:test_app/screen/profile_screen.dart';
 
 class SplashScreen extends StatefulWidget{
   const SplashScreen({super.key});
@@ -13,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void _goToHome() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const ProfileScreen()),
+      MaterialPageRoute(builder: (context) => const HomeScreen()),
     );
   }
 
